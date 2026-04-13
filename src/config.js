@@ -1,4 +1,4 @@
-g const API_BASE_URL = "https://busbooking-backend.vercel.app/api/";
+const API_BASE_URL = "https://busbooking-backend.vercel.app/api/";
 // const API_BASE_URL = " http://localhost:5000/api/";
 
 
