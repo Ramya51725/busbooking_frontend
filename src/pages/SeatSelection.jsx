@@ -220,7 +220,7 @@ function SeatSelection() {
               </TextField>
 
               <Box sx={{ p: 2, bgcolor: "#f1f5f9", borderRadius: 2 }}>
-                <Typography variant="body2">Seats</Typography>
+                <Typography variant="body2">Seat No</Typography>
                 <Typography fontWeight="bold">
                   {selectedSeats.length ? selectedSeats.join(", ") : "None"}
                 </Typography>

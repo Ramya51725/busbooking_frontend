@@ -71,7 +71,12 @@ const CreateBus = ({ open, handleClose, refreshBuses }) => {
 
     } catch (err) {
       console.error(err);
-    }
+  alert(
+    err.response?.data?.message, 
+    err.response?.data?.error || 
+    "Validation error"
+  );    }
+
   };
 
   return (
@@ -175,15 +180,18 @@ const CreateBus = ({ open, handleClose, refreshBuses }) => {
           </Grid>
 
           <Grid item xs={12}>
-            <TextField
-              fullWidth
-              type="date"
-              label="Date *"
-              name="date"
-              value={form.date}
-              InputLabelProps={{ shrink: true }}
-              onChange={handleChange}
-            />
+          <TextField
+            fullWidth
+            type="date"
+            label="Date *"
+            name="date"
+            value={form.date}
+            InputLabelProps={{ shrink: true }}
+            inputProps={{
+              min: new Date().toISOString().split("T")[0] 
+            }}
+            onChange={handleChange}
+          />
           </Grid>
 
           <Grid item xs={12}>

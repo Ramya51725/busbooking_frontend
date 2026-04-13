@@ -130,10 +130,14 @@ function PassengerDetails() {
               sx={{ width: 100 }}
               value={p.age}
               onChange={(e) => {
-                const up = [...passengers];
-                up[i].age = e.target.value;
-                setPassengers(up);
-              }}
+              const value = e.target.value;
+
+              if (value < 0) return;
+
+              const up = [...passengers];
+              up[i].age = value;
+              setPassengers(up);
+            }}
             />
 
             <TextField
